@@ -75,6 +75,14 @@ p{
  color: gray
 }
 
+.attribution a{
+  color: gray
+}
+
+.hide{
+  display: none;
+}
+
 /* home */
 #home-container{
   display: flex;
@@ -182,10 +190,16 @@ p{
   border: 1px solid white;
   color: white;
   font-family: var(--accent-font);
+  font-size: 16px;
 }
 .project-card button:hover{
   background-color: white;
   color: var(--dark-blue);
+}
+
+.project-card button:hover path{
+  stroke: var(--dark-blue);
+  fill: var(--dark-blue);
 }
 
 /*experience*/
@@ -202,11 +216,20 @@ p{
 .experience-container{
   display: flex;
   text-align: left;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
 .experience-container h2, .experience-container h3{
   margin: 5px
+}
+
+.experience-container p{
+  text-indent: 1em; 
+}
+.experience-container li{
+  line-height: 30px;
 }
 
 /*skills*/
@@ -260,9 +283,8 @@ p{
 /* about */
 
 #about-view{
-  background-color: var(--dark-blue);
-  padding:10%;
-  padding-bottom: 5%;
+  background-color: var(--dark-blue-2);
+  padding:5% 10%;
 }
 
 #about-view svg{
@@ -273,6 +295,7 @@ p{
 }
 
 #about-view p{
+  text-indent: 3em;
   text-align: justify;
-  margin: 50px;
+  margin: 20px 50px;
 }
