@@ -106,6 +106,12 @@ p{
   align-items: center;
   justify-content: center;
   color: white;
+  box-shadow: 
+    inset 0 0 15px rgba(255, 217, 0, 0.152),     
+    inset 2px 2px 25px rgba(0, 0, 0, 0.638),     
+    inset -2px -2px 3px rgba(255, 255, 255, 0.15), 
+    0 8px 15px rgba(0, 0, 0, 0.526),           
+    0 0 8px rgba(255, 217, 0, 0.301);            
 
 }
 #contacts svg{
@@ -114,8 +120,12 @@ p{
   transition-duration: 1s;
 }
 #download-cv:hover{
-  border: 1px solid white;
-  transition-duration: 1s;
+ box-shadow: 
+  inset 0 0 45px rgba(255, 215, 0, 0.2),    
+  inset 3px 3px 10px rgba(0, 0, 0, 0.45),   
+  inset -3px -3px 10px rgba(255, 255, 255, 0.09), 
+  0 12px 35px rgba(0, 0, 0, 0.4),
+  0 0 25px rgba(255, 215, 0, 0.18);   
 }
 #download-cv:hover svg{
   stroke: white;
@@ -136,21 +146,21 @@ p{
   margin: 50px 20px 0 20px;
   background-color: var(--dark-blue);
   min-height: 400px;
-    
- 
-    box-shadow: 
-        inset 0 0 35px rgba(255, 217, 0, 0.152),     /* Gold inner glow */
-        inset 2px 2px 50px rgba(0, 0, 0, 0.638),       /* Depth shadow */
-        inset -2px -2px 6px rgba(255, 255, 255, 0.15), /* Highlight edge */
-        0 8px 28px rgba(0, 0, 0, 0.526),             /* Outer separation */
-        0 0 15px rgba(255, 217, 0, 0.301);            /* Subtle gold aura */
-    
-    
+  box-shadow: 
+      inset 0 0 35px rgba(255, 217, 0, 0.152),     /* Gold inner glow */
+      inset 2px 2px 50px rgba(0, 0, 0, 0.638),       /* Depth shadow */
+      inset -2px -2px 6px rgba(255, 255, 255, 0.15), /* Highlight edge */
+      0 8px 28px rgba(0, 0, 0, 0.526),             /* Outer separation */
+      0 0 15px rgba(255, 217, 0, 0.301);            /* Subtle gold aura */
+}
+.project-card:hover{
+      box-shadow: 
+        inset 0 0 45px rgba(255, 215, 0, 0.2),      /* Enhanced gold glow */
+        inset 3px 3px 10px rgba(0, 0, 0, 0.45),     /* Deeper shadow */
+        inset -3px -3px 10px rgba(255, 255, 255, 0.09), /* Stronger highlight */
+        0 12px 35px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(255, 215, 0, 0.18);           /* Prominent gold aura */
 
-    background-size: cover;
-    background-clip: padding-box;
-    
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-card h2{
   margin-top: 30px; 
@@ -259,7 +269,6 @@ p{
   transition: opacity 0.2s ease;
 } 
 
-
 /*skills*/
 
 #skills-view{
@@ -272,29 +281,58 @@ p{
   justify-content: center;
 }
 .skill-class{
-  background-color: var(--dark-blue);
+  position: relative; 
+  background: var(--dark-blue);
   width: 300px;
-  height: 100px;
-  padding: 50px 25px;
-  border: 1px solid var(--gold);
+  height: 120px;
+  padding: 40px 25px 40px 25px; 
+  border: 2px solid var(--gold);
+  
+  box-shadow: 
+    inset 0 0 35px rgba(255, 217, 0, 0.152),
+    inset 2px 2px 50px rgba(0, 0, 0, 0.638),  
+    inset -2px -2px 6px rgba(255, 255, 255, 0.15),
+    0 8px 28px rgba(0, 0, 0, 0.526),    
+    0 0 15px rgba(255, 217, 0, 0.301);      
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 8px; 
+  transition: all 0.3s ease;
+}
+.skill-class:hover{
+  box-shadow:  
+    inset 0 0 45px rgba(255, 215, 0, 0.2),   
+    inset 3px 3px 10px rgba(0, 0, 0, 0.45),  
+    inset -3px -3px 10px rgba(255, 255, 255, 0.09), 
+    0 12px 35px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(255, 215, 0, 0.18);     
 }
 .skill-class div{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   font-family: var(--header-font);
-  display: flex;
-  background-color: var(--dark-blue);
+  background: var(--dark-blue);
   border: 1px solid var(--gold);
   width: 150px;
-  height: 50px;
-  padding:0 10px;
-  position: absolute;
-  translate: 0 -100px;
-  z-index: 0;
+  height: 40px;
+  padding: 0 15px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
+  box-shadow: 
+    inset 0 0 15px rgba(255, 217, 0, 0.152),  
+    inset 2px 2px 25px rgba(0, 0, 0, 0.638),   
+    inset -2px -2px 3px rgba(255, 255, 255, 0.15), 
+    0 8px 15px rgba(0, 0, 0, 0.526),  
+    0 0 8px rgba(255, 217, 0, 0.301);      
+  z-index: 1; /* Above the content */
+  pointer-events: none;
 }
 .skill-class span{
   border: 1px solid var(--gold);
@@ -306,7 +344,6 @@ p{
 }
 
 /* about */
-
 #about-view{
   background-color: var(--dark-blue-2);
   padding:5% 10%;
@@ -324,7 +361,6 @@ p{
 }
 
 /* background animation */
-
 canvas {
     position: fixed;
     top: 0;
