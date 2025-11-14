@@ -13,7 +13,7 @@ scroll(currSection);
 acadSection.classList.add('hidden');
 
 
-// -- SCROLL BEHAVIOR (disabled when on mobile)
+// -- SCROLL BEHAVIOR
 let throttleTimeout = null;
 document.addEventListener('wheel', e => {
     if (!throttleTimeout) {
