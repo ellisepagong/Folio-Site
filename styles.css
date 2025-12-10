@@ -116,11 +116,6 @@ a { color: var(--dark-blue); }
   animation: typing 1s linear infinite;
   animation-iteration-count: 5;
 }
-  .typewriter::after {
-  content: "";
-}
-
-
 
 
 @keyframes jiggle {
